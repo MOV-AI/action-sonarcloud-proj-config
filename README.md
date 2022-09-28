@@ -27,3 +27,11 @@ jobs:
       with:
         sonar_token: ${{ secrets.sonar_token }}
 ```
+
+## Inputs
+
+### Required
+- `sonar_token` - SonarCloud token.
+
+### Not required
+- `sonar_org` (default: `${{ github.repository_owner }}`) - SonarCloud organization name.
