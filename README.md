@@ -30,13 +30,12 @@ jobs:
     - name: Create SonarCloud project and disable autoscan
       uses: MOV-AI/action-sonarcloud-proj-config@v1
       with:
+        sonar_org: 'mov-ai'
         sonar_token: ${{ secrets.sonar_token }}
 ```
 
 ## Inputs
 
 ### Required
+- `sonar_org` - SonarCloud organization name.
 - `sonar_token` - SonarCloud token.
-
-### Not required
-- `sonar_org` (default: `${{ github.repository_owner }}`) - SonarCloud organization name.

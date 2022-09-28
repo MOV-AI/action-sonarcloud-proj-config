@@ -5,8 +5,7 @@ description: 'Manages SonarCloud projects'
 inputs:
   sonar_org:
     description: 'SonarCloud organization name'
-    required: false
-    default: ${{ github.repository_owner }}
+    required: true
   sonar_token:
     description: 'SonarCloud access token'
     required: true
