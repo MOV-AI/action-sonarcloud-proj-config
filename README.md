@@ -2,9 +2,14 @@
 
 With this GitHub Action you can configure a SonarCloud project to run analisys triggered workflows execution.
 
+The action performs the following steps:
+1. Check if the SonarCloud project exists
+2. Create the project if it does not exist
+3. Disable autoscan
+
 ## Usage
 
-The workflow YAML file will usually look something like this:
+Github workflow YAML file example:
 
 ```yaml
 on:
@@ -22,7 +27,7 @@ jobs:
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
 
-    - name: Collect reports and run Sonar
+    - name: Create SonarCloud project and disable autoscan
       uses: MOV-AI/action-sonarcloud-proj-config@v1
       with:
         sonar_token: ${{ secrets.sonar_token }}
