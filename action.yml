@@ -18,7 +18,7 @@ runs:
         GITHUB_ORG: ${{ github.repository_owner }}
         REPO_NAME: ${{ github.event.repository.name }}
         SONAR_ORG: mov-ai
-        SONAR_TOKEN: ${{ secrets.sonar_token }}
+        SONAR_TOKEN: ${{ inputs.sonar_token }}
       run: |
         json=$( \
             curl -k -s  \
@@ -60,7 +60,7 @@ runs:
         REPO_NAME: ${{ github.event.repository.name }}
         GITHUB_TOKEN: ${{ github.token }}
         SONAR_ORG: mov-ai
-        SONAR_TOKEN: ${{ secrets.sonar_token }}
+        SONAR_TOKEN: ${{ inputs.sonar_token }}
       run: |
         # find repository ID
         json=$(curl \
@@ -84,7 +84,7 @@ runs:
         REPO_NAME: ${{ github.event.repository.name }}
         GITHUB_TOKEN: ${{ github.token }}
         SONAR_ORG: mov-ai
-        SONAR_TOKEN: ${{ secrets.sonar_token }}
+        SONAR_TOKEN: ${{ inputs.sonar_token }}
       run: |
         # configure autoscan (it is enabled at project creation)
         curl --include \
