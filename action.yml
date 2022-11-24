@@ -17,7 +17,7 @@ runs:
     - name: Install action dependencies
       shell: sh
       run: |
-        sudo apt install -y curl jq
+        apt install -y curl jq
 
     - name: Check if SonarCloud project exists
       id: sonar_project
