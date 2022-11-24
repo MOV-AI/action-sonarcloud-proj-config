@@ -14,6 +14,11 @@ runs:
   using: "composite"
 
   steps:
+    - name: Install action dependencies
+      shell: sh
+      run: |
+        sudo apt install -y curl jq
+
     - name: Check if SonarCloud project exists
       id: sonar_project
       shell: sh
