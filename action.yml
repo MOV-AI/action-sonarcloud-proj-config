@@ -17,10 +17,10 @@ runs:
     - name: Install action dependencies
       shell: sh
       run: |
-        if [[ -z "$(command -v curl)" ]]; then
+        if [ -z "$(command -v curl)" ]; then
           apt install -y curl
         fi
-        if [[ -z "$(command -v jq)" ]]; then
+        if [ -z "$(command -v jq)" ]; then
           apt install -y jq
         fi
 
